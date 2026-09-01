@@ -33,4 +33,9 @@ Modelin rastgele bir veri bölünmesinde şans eseri yüksek skor almadığında
 1.  **5 Katlı Çapraz Doğrulama (Cross-Validation):** Model, veri setinin farklı parçalarında 5 ayrı teste tabi tutulmuş; iterasyonlar arasındaki F1 skorlarının birbirine çok yakın çıkmasıyla sistemin stabilitesi ve ezber (overfitting) yapmadığı kanıtlanmıştır.
 2.  **GridSearchCV ile Hiperparametre Ayarı:** `n_estimators` (ağaç sayısı) ve `learning_rate` (öğrenme hızı) gibi kritik parametreler ızgara araması (grid search) yöntemiyle otomatik olarak test edilmiş, F1 skorunu zirveye taşıyan en optimal konfigürasyon tespit edilmiştir.
 
+## Gelecek Planları (Roadmap) & Entegrasyon
+Bu proje şu an için optimize edilmiş bir Jupyter Notebook ve eğitilmiş model dosyası (`.joblib`) olarak tamamlanmıştır. İlerleyen aşamalarda sistemin herkes tarafından kullanılabilmesi için şu geliştirmelerin yapılması planlanmaktadır:
+* **Backend API:** Modelin dış dünyaya açılabilmesi ve dışarıdan gelen isteklere yanıt verebilmesi için FastAPI veya Django REST Framework tabanlı bir REST API geliştirilmesi.
+* **GitHub API Entegrasyonu:** Kullanıcıların manuel veri girmesine gerek kalmadan, sadece bir GitHub repo URL'si girerek sistemin ilgili verileri doğrudan GitHub API üzerinden otomatik olarak çekmesi.
+* **Frontend Arayüzü:** Kullanıcıların tahmin sonuçlarını şık ve interaktif bir şekilde görebilmesi için React tabanlı bir web arayüzünün tasarlanması.
 ---
